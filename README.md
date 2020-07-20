@@ -72,13 +72,3 @@ Você pode também pode criar usuários, para isso, acesse a documentação em `
 ## Endpoints
 
 Após executar a aplicação, você pode acessar a documentação da API, contendo os endpoints implementados, no endereço ```http://localhost:8080/documentation/```.
-
-## Deploy
-
-Para fins de demonstração de funcionamento, foi feito o deploy da aplicação nas plataformas [Heroku](https://www.heroku.com/) e [Netlify](https://www.netlify.com/).
-
-| Plataforma | Serviço | Link |
-| :--- | :--- | :--- |
-| Netlify | Front-end | [https://squad-1-front.netlify.com](https://squad-1-front.netlify.com)|
-| Heroku | Back-end | *Sem acesso externo* |
-| Heroku | Banco de Dados | *Sem acesso externo* |
