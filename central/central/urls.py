@@ -15,14 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from logs import views as log_views
 from django.conf.urls import url
-from rest_framework_swagger.views import get_swagger_view
-schema_view = get_swagger_view(title='API Central de Erros')
+from rest_framework.schemas import get_schema_view
+from rest_framework_swagger import renderers
+schema_view = get_schema_view(title="Central de Erros", public=True, renderer_classes=[renderers.OpenAPIRenderer, renderers.SwaggerUIRenderer])
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/logs/', log_views.ListLogsViewset.as_view()),
-    path('api/logs/<pk>/', log_views.LogViewset.as_view()),
+    path('api/logs/', include('logs.urls')),
     path('api/', include('djoser.urls.authtoken')),
     path('api/', include('djoser.urls')),
     path('api/documentation/', schema_view),
