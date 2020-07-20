@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from logs import views as log_views
+from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
+schema_view = get_swagger_view(title='API Central de Erros')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/logs/', log_views.ListLogsViewset.as_view()),
     path('api/logs/<pk>/', log_views.LogViewset.as_view()),
     path('api/', include('djoser.urls.authtoken')),
-    path('api/', include('djoser.urls'))
+    path('api/', include('djoser.urls')),
+    path('api/documentation/', schema_view),
 ]
