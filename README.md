@@ -48,7 +48,7 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-> Para testar a API, envie uma requisição POST para ```http://localhost:8000/api/token/login/´´´ com o seguinte JSON na body:
+> Para testar a API, envie uma requisição POST para `http://localhost:8000/api/token/login/` com o seguinte JSON na body:
 
 ```
 {
@@ -65,10 +65,10 @@ $ python manage.py runserver
 }
 ```
 
-Utilize o token para acessar as sessão de Logs: ```http://localhost:8000/api/logs/´´´.
+Utilize o token para acessar a sessão de Logs: `http://localhost:8000/api/logs/`.
 
-Você pode também pode criar usuários, para isso, acesse a documentação em ```http://localhost:8000/api/documentation/´´´.
+Você pode também pode criar usuários, para isso, acesse a documentação em `http://localhost:8000/api/documentation/`.
 
 ## Endpoints
 
-Após executar a aplicação, você pode acessar a documentação da API, contendo os endpoints implementados, no endereço ```http://localhost:8080/documentation/```.
+Após executar a aplicação, você pode acessar a documentação da API, contendo os endpoints implementados, no endereço `http://localhost:8080/documentation/`.
