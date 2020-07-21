@@ -31,6 +31,7 @@ $ pip3 install virtualenv
 $ virtualenv venv -p python3
 $ source venv/bin/activate
 $ pip install -r requirements.txt
+$ python -m pip install git+https://github.com/thiagodfreitasevans/django-rest-swagger.git
 ```
 
 ### Configurando banco de dados e criando super usuário
