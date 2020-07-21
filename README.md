@@ -30,7 +30,6 @@ $ git clone https://github.com/thiagodfreitasevans/central_de_erros.git
 $ pip3 install virtualenv
 $ virtualenv venv -p python3
 $ source venv/bin/activate
-$ cd central
 $ pip install -r requirements.txt
 ```
 
@@ -38,7 +37,7 @@ $ pip install -r requirements.txt
 
 ```bash
 $ python manage.py makemigrations
-$ python migrate
+$ python manage.py migrate
 $ python manage.py createsuperuser
 ```
 
@@ -48,7 +47,7 @@ $ python manage.py createsuperuser
 $ python manage.py runserver
 ```
 
-> Para testar a API, envie uma requisição POST para `http://localhost:8000/api/token/login/` com o seguinte JSON na body:
+Para testar a API, envie uma requisição POST para `http://localhost:8000/api/token/login/` com o seguinte JSON na body:
 
 ```
 {
@@ -57,7 +56,7 @@ $ python manage.py runserver
 }
 ```
 
-> O resultado será algo como:
+O resultado será algo como:
 
 ```
 {
@@ -65,9 +64,10 @@ $ python manage.py runserver
 }
 ```
 
-Utilize o token para acessar a sessão de Logs: `http://localhost:8000/api/logs/`.
+Faça uma requisição POST para `http://localhost:8000/api/logs/` e passe o token para autorizar o acesso.
+> Se estiver utilizando o Postman, por exemplo, na seção `Headers`, insira a key `Authorization` com value `Token token_gerado`. O resultado será uma lista vazia.
 
-Você pode também pode criar usuários, para isso, acesse a documentação em `http://localhost:8000/api/documentation/`.
+Acesse a documentação para saber como realizar o CRUD de Logs e como registrar novos usuários: `http://localhost:8000/api/documentation/`.
 
 ## Endpoints
 
